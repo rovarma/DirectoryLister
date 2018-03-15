@@ -36,7 +36,7 @@
                     $dirArray = $lister->listDirectory($_GET['dir'],$_GET['by'],'asc');
                 }
             } else {
-                $dirArray = $lister->listDirectory($_GET['dir'],'name', 'asc');
+                $dirArray = $lister->listDirectory($_GET['dir'],'lastModified', 'desc');
             }
         } else {
             if(isset($_GET['by'])){
@@ -46,7 +46,7 @@
                     $dirArray = $lister->listDirectory('.',$_GET['by'],'asc');
                 }
             } else {
-                $dirArray = $lister->listDirectory('.','name', 'asc');
+                $dirArray = $lister->listDirectory('.','lastModified', 'desc');
             }
         }
 
