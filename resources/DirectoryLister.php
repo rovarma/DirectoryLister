@@ -1,5 +1,7 @@
 <?php
 
+date_default_timezone_set('Europe/Amsterdam');
+
 /**
  * A simple PHP based directory lister that lists the contents
  * of a directory and all it's sub-directories and allows easy
