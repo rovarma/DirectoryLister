@@ -220,7 +220,7 @@ class DirectoryLister {
 
         // Statically set the Home breadcrumb
         $breadcrumbsArray[] = array(
-            'link' => $this->_appURL,
+            'link' => $this->_appURL . "index.php",
             'text' => $this->_config['home_label']
         );
 
@@ -631,7 +631,9 @@ class DirectoryLister {
 
                         if (!empty($directoryPath)) {
                             $directoryPath = '?dir=' . rawurlencode($directoryPath);
-                        }
+                        } else {
+							$directoryPath = "index.php";
+						}
 
                         // Add file info to the array
                         $directoryArray['..'] = array(
